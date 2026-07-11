@@ -109,9 +109,8 @@ button {
 /* ── Grid ────────────────────────────────────────── */
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: var(--grid-gap);
+  column-count: 1;
+  column-gap: var(--grid-gap);
   padding: var(--grid-gap);
 }
 
@@ -120,6 +119,8 @@ button {
   overflow: hidden;
   background: var(--surface);
   cursor: pointer;
+  break-inside: avoid;
+  margin-bottom: var(--grid-gap);
   /* Diagonal tilt starts flat, tilts on hover */
   transform: rotate(0deg);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
@@ -152,8 +153,7 @@ button {
 
 .grid-item__img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -361,11 +361,32 @@ button {
 
 /* ── Responsive ──────────────────────────────────── */
 
+@media (min-width: 600px) {
+  .grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    column-count: 4;
+  }
+}
+
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
+    column-gap: 4px;
     padding: 4px;
+  }
+
+  .grid-item {
+    margin-bottom: 4px;
   }
 
   /* Kill diagonal on small screens — tight grid looks better flat */
@@ -388,17 +409,5 @@ button {
 
   .lightbox__figure {
     max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
