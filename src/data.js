@@ -11,18 +11,26 @@
 
 /** @type {PubmatEntry[]} */
 const pubmats = [
-  // Example entry (uncomment and replace when adding real work):
-  //
-  // {
-  //   id: 'sample-pubmat',
-  //   title: 'Event Name — Pubmat',
-  //   image: '/pubmats/sample.jpg',
-  //   date: '2026-06',
-  //   org: 'Organization Name',
-  //   description: 'What this was for, context, design decisions.',
-  //   tags: ['pubmat', 'event'],
-  //   category: 'pubmat',
-  // },
+  {
+    id: 'hack-and-yap',
+    title: 'Hack & Yap',
+    image: '/pubmats/hack-and-yap.png',
+    date: '2026-02-28',
+    org: 'Pizza & Friends x GitHub',
+    description: 'Pubmat for Hack & Yap, a stupid ideas hackathon. Designed with a vibrant red background and playful elements.',
+    tags: ['hackathon', 'event', 'poster'],
+    category: 'pubmat',
+  },
+  {
+    id: 'campfire-5-years',
+    title: 'Campfire: 5 Years of Warmth',
+    image: '/pubmats/campfire.png',
+    date: '2026-10-23',
+    org: 'HearthCraft',
+    description: 'Campfire event celebrating 5 years of HearthCraft. Features a cozy outdoor theme with an anime-style mascot.',
+    tags: ['anniversary', 'minecraft', 'server', 'event'],
+    category: 'pubmat',
+  },
 ];
 
 export default pubmats;
