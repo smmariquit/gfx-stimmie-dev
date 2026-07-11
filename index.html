@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gfx — stimmie</title>
+    <meta name="description" content="Graphic design work by Stimmie. Pubmats, posters, and visual communications." />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="site-header">
+      <a href="/" class="wordmark" id="wordmark">gfx<span class="dot">.</span>stimmie</a>
+      <nav id="site-nav">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+      </nav>
+    </header>
+
+    <main id="gallery">
+      <div class="grid" id="grid"></div>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox__close" id="lightbox-close" aria-label="Close">&times;</button>
+      <div class="lightbox__content" id="lightbox-content">
+        <figure class="lightbox__figure">
+          <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+        </figure>
+        <aside class="lightbox__details" id="lightbox-details">
+          <h2 class="lightbox__title" id="lightbox-title"></h2>
+          <time class="lightbox__date" id="lightbox-date"></time>
+          <p class="lightbox__org" id="lightbox-org"></p>
+          <div class="lightbox__description" id="lightbox-description"></div>
+          <div class="lightbox__tags" id="lightbox-tags"></div>
+        </aside>
+      </div>
+    </div>
+
+    <footer id="site-footer">
+      <p>&copy; stimmie</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
