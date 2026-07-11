@@ -51,7 +51,7 @@ function renderGrid() {
     grid.innerHTML = `
       <div class="grid-empty">
         <p class="grid-empty__heading">Nothing here yet</p>
-        <p class="grid-empty__sub">Pubmats go in /public/pubmats/ — entries in src/data.js</p>
+        <p class="grid-empty__sub">Check back later for more updates.</p>
       </div>
     `;
     return;
