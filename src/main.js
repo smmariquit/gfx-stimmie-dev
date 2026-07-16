@@ -27,14 +27,16 @@ function renderGrid() {
     return;
   }
 
-  pubmats.forEach(item => {
+  pubmats.forEach((item, index) => {
     const el = document.createElement('div');
     el.className = 'grid-item';
     el.setAttribute('role', 'button');
     el.setAttribute('tabindex', '0');
     el.setAttribute('aria-label', item.title);
+    const imgLoading = index === 0 ? 'eager' : 'lazy';
+    const imgPriority = index === 0 ? ' fetchpriority="high"' : '';
     el.innerHTML = `
-      <img class="grid-item__img" src="${item.image}" alt="${item.title}" loading="lazy" />
+      <img class="grid-item__img" src="${item.image}" alt="${item.title}" loading="${imgLoading}"${imgPriority} />
       <div class="grid-item__label">
         <p class="grid-item__title">${item.title}</p>
         ${item.date ? `<p class="grid-item__meta">${item.date}${item.org ? ` · ${item.org}` : ''}</p>` : ''}
